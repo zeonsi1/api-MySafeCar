@@ -8,7 +8,7 @@ const pool = new Pool({
 });
 
 const getEstacionamiento = async(req, res) => {
-    const response = await pool.query('SELECT * FROM estacionamiento');
+    const response = await pool.query('SELECT * FROM estacionamiento ORDER BY id_estacionamiento');
     res.status(200).json(response.rows);
 };
 
